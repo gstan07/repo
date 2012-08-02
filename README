@@ -1,1 +1,5 @@
 This is a collection of UI elements, components, supercomponents and usage patterns.
+It is based on the power and flexibility of Twitter Bootsrap for the styling and interaction.
+Other libraries used:
+ - jQuery Chosen - for the dropdown component
+
