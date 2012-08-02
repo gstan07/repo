@@ -1,0 +1,44 @@
+.table{
+  .border-radius(@buttonBorderRadius);
+   border: 1px solid @tableBorder;
+   font-size:@baseFontSize;
+  td,th{
+    line-height: @tableLineHeight;
+    padding:7px;
+    background-color:#DBDBDB;
+    border:none;
+  }
+  tbody tr:hover td,
+  tbody tr:hover th {
+    background-color: inherit;
+  }
+}
+.table-bordered{
+   .border-radius(@buttonBorderRadius);
+}
+
+.table-striped {
+  tbody {
+    tr:nth-child(even) td,
+    tr:nth-child(even) th {
+      background-color: #fff;
+    }
+  }
+}
+
+.table{
+  .border-radius(@buttonBorderRadius);
+   border: 1px solid @tableBorder;
+  td,th{
+    line-height: @tableLineHeight;
+    padding:7px;
+    background-color:#DBDBDB;
+    border:none;
+  }
+  tbody tr:hover td,
+  tbody tr:hover th {
+    background-color: @tableBackgroundHover;
+  }
+}
+
+

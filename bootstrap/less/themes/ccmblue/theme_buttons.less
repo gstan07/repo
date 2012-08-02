@@ -1,0 +1,59 @@
+//this will overwrite some bootstrap button css declarations
+
+.btn{
+	border-color:#999;
+	.border-radius(@buttonBorderRadius);
+	font-weight:@semiboldWeight;
+	padding:1px 20px 3px 20px;
+	box-shadow:none;
+	&:hover{
+		.transition("none");
+
+		background-position:top;
+	}
+	&:focus {
+	    border-color: rgba(82,168,236,.8);
+	    outline: 0;
+	    outline: thin dotted \9; /* IE6-9 */
+	    .box-shadow(~"inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)");
+  	}
+}
+
+.btn-large {
+  padding: 4px 20px 5px 20px;
+  font-size: @baseFontSize + 1px;
+}
+.btn-primary{
+	border-color:#137EDA;
+}
+.btn-success{
+	border-color:#008c00;
+}
+.btn-warning{
+	border-color:#ff8000;
+}
+.btn-danger{
+	border-color:#cc0000;
+}
+
+.btn.disabled,
+.btn[disabled] {
+	#gradient > .vertical(#fff,#ededed);
+	border-color:#c7c7c7;
+	color:#8B8B8B;
+	&:focus{
+		.box-shadow(none);
+	}
+}
+.btn.active {
+  background-color: darken(@white, 10%);
+  background-color: darken(@white, 15%) e("\9");
+  #gradient > .vertical(#6f6f6f,#454545);
+  color:#E8E8E8;
+  text-shadow: 1px 2px #3a3a3a;
+  border-color:#333;
+  outline: 0;
+  
+  //.box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
+}
+

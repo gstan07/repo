@@ -1,0 +1,45 @@
+// Shared size and type resets
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  padding: 1px 2px!important;
+  .box-sizing(border-box);
+  margin-bottom: 9px;
+  height:auto!important;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  color: @black;
+  &:focus {
+    border-color: rgba(21,75,196,1);
+    //outline: 1px solid #5496E5;
+    outline: thin dotted \9; /* IE6-9 */
+    .box-shadow(0 0 8px #5496E5);
+  }
+  width:@defaultInputWidth;
+  &.input-mini       { width: 60px; }
+  &.input-small      { width: 90px; }
+  &.input-medium     { width: 150px; }
+  &.input-large      { width: 210px; }
+  &.input-xlarge     { width: 270px; }
+  &.input-xxlarge    { width: 530px; }
+}
+label{
+  font-weight:@semiboldWeight;  
+}
+input[type="range"]{
+  width:@defaultInputWidth;
+}

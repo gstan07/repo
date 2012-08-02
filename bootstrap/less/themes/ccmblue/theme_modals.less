@@ -1,0 +1,46 @@
+.modal{
+	background-color: #fff;
+	.border-radius(@dataPodsBorderRadius);
+	border-color:#ccc!important;
+
+	.modal-header{
+		border-color:#ccc!important;
+		padding: 9px 20px;
+		h1{
+			font-size:24px;
+			line-height:24px;
+
+		}
+	}
+	.modal-body{
+		padding:20px;
+		.cool_scrollbar;
+	}
+	.modal-footer {
+		border-color:#ccc!important;
+  		padding: 14px 20px 15px 20px;
+  		background-color: #fff;
+  	}
+  	&.nonfloating{
+  		.box-shadow(0px 0px 5px #e1e1e1);
+  		position:relative;
+  		margin:0;
+  		top:0;
+  		left:0;
+  		width:100%;
+  		z-index:0;
+  	}
+  	&.filterpanel{
+  		position:absolute;
+  		width:440px;
+  		overflow:visible;
+  		height:auto;
+  		top:270px;
+  		left:290px;
+  		.modal-body{
+  			overflow:visible;
+  			height:auto;
+  		}
+  	}
+
+}

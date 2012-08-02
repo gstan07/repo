@@ -1,0 +1,35 @@
+
+.btn-group > .btn:first-child{
+	.border-radius-4corners(@buttonBorderRadius,0,0,@buttonBorderRadius);	
+}
+
+
+.btn-group > .btn:last-child,
+{
+	.border-radius-4corners(0,@buttonBorderRadius,@buttonBorderRadius,0);	
+	//box-shadow:none;
+}
+.btn-group > .btn.dropdown-toggle {
+	.border-radius(@buttonBorderRadius)
+}
+// Reset corners for large buttons
+.btn-group > .btn.large:first-child {
+  
+	.border-radius-4corners(@buttonBorderRadius,0,0,@buttonBorderRadius);
+
+}
+.btn-group > .btn.large:last-child,
+.btn-group > .large.dropdown-toggle {
+	.border-radius-4corners(0,@buttonBorderRadius,@buttonBorderRadius,0);	
+}
+
+//bootstrap doesn't have a switch component so here it is
+.btn-group.switch .btn{
+	padding:2px 4px;
+	&.active{
+		background-color:#666;
+		color:#fff;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+		border-color:#333;
+	}
+}

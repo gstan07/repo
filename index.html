@@ -1,0 +1,1448 @@
+
+<html>
+<head>
+<title>Business Catalyst UI Style Guide</title>
+<!--<bootstrap compiled CSS>-->
+<link rel="stylesheet" href="bootstrap/css/bctheme.css"/>
+<link rel="stylesheet" href="bootstrap/css/responsive.css"/>
+<!--</bootstrap compiled CSS>-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="index.js" type="text/javascript"></script>
+<!--<bootstrap JS components>-->
+<script src="bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+<script src="bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+<script src="bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+<script src="bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+<script src="bootstrap/js/bootstrap-button.js" type="text/javascript"></script>
+<script src="bootstrap/js/bootstrap-tooltip.js" type="text/javascript"></script>
+<script src="bootstrap/js/bootstrap-popover.js" type="text/javascript"></script>
+<script src="bootstrap/js/bootstrap-tab.js" type="text/javascript"></script>
+<!--</bootstrap JS components>-->
+
+
+<!--<typekit JS>-->
+<!--include your own-->
+<script type="text/javascript" src="http://use.typekit.com/yub8nzg.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<!--</typekit JS>-->
+
+<!--<google code prettify>-->
+<!--this is for code presentation purpose only-->
+<script src="lib/gcp/prettify.js" type="text/javascript"></script>
+<link rel="stylesheet" href="lib/gcp/prettify.css"/>
+<!--</google code prettify>-->
+
+<!--<css browser selector>-->
+<script src="lib/css-browser-selector/cbs.js" type="text/javascript"></script>
+<!--</css browser selector>-->
+
+<!--<compoenents JS>-->
+<script src="lib/chosen/chosen.jquery.min.js"></script>
+<!--</compoents JS>-->
+
+<style>
+/*presentation purpose only*/
+.getcode{
+	display:inline-block;
+	width:20px;
+	height:15px;
+	border:1px solid #ccc;
+	line-height:20px;
+	vertical-align:middle;
+	background-color:#fff;
+	cursor:pointer;
+	border-radius:2px;
+	vertical-align:top;
+
+}
+.getcode:hover{
+	background-color:#999;
+	border:1px solid #333;
+}
+.getcode:hover:after{
+	color:#fff;
+}
+.getcode:before{
+	content:"</>";
+	font-weight:bold;
+	vertical-align:middle;
+	color:#ccc;
+	position:relative;
+	font-size:10px;
+	top:-5px;
+	left:2px;
+
+}
+</style>
+</head>
+<body>
+<div class="modal hide" id="downloadModal">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h1>How to Use</h1>
+					</div>
+					<div class="modal-body">
+						<p>To use the elements styled in this guide, you will need to have the folowing setup:</p>
+						<pre class="prettyprint">
+							
+						</pre>
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="btn" data-dismiss="modal">Close</a>
+						
+					</div>
+				</div>
+<div class="modal hide" id="codeModal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h1>Get Code</h1>
+		</div>
+		<div class="modal-body">
+			<a href="#" id="selectAll">Select All</a>
+			<pre class="prettyprint" id="prettyprint">
+
+			</pre>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
+		</div>
+</div>
+
+<div class="navbar navbar-fixed-top" id = "navbar">
+  <div class="navbar-inner">
+
+  			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        		<span class="icon-bar"></span>
+       			 <span class="icon-bar"></span>
+       			 <span class="icon-bar"></span>
+     		 </a>
+     		 <a class="brand" href="#">Business Catalyst UI guide</a>
+  			<div class = "nav-collapse collapse">
+      			<ul class="nav">
+      				<li class="active">
+				    <a href="#" data-sectionswitch = "welcome">Welcome</a>
+				  </li>
+				  <li>
+				    <a href="#" data-sectionswitch = "buttons">UI Buttons</a>
+				  </li>
+				  <li class="divider-vertical"></li>
+				  <li><a href="#" data-sectionswitch = "pods">Pods, modals</a></li>
+				  <li class="divider-vertical"></li>
+				  <li><a href="#" data-sectionswitch = "forms">Form Elements</a></li>
+				  <li class="divider-vertical"></li>
+				  <li><a href="#" data-sectionswitch = "tables">Tables</a></li>
+				  <li class="divider-vertical"></li>
+				  <li><a href="#" data-sectionswitch = "grid">Using the grid</a></li>
+				  <li class="divider-vertical"></li>
+
+		  
+				 
+				  <li class = "dropdown">
+				  	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc Components<b class="caret"></b></a>
+				    <ul class="dropdown-menu">
+				      <li><a href = "#" data-sectionswitch = "tooltips">Tooltips and pop-overs</a></li>
+				       <li><a href = "#" data-sectionswitch = "accordion">Accordion</a></li>
+				       <li><a href = "#" data-sectionswitch = "filters">Filters</a></li>
+				       <li><a href = "#" data-sectionswitch = "tabs">Tabs</a></li>
+				    </ul>
+				  </li>
+				  <li class="divider-vertical"></li>
+
+				  <li class = "dropdown">
+				  	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Prototypes<b class="caret"></b></a>
+				    <ul class="dropdown-menu">
+				      <li><a href = "#">Prototype</a></li>
+				      <li><a href = "#">Prototype</a></li>
+				      <li><a href = "#">Prototype</a></li>
+				    </ul>
+				  </li>
+
+				</ul>
+				<a href="#" class="btn btn-primary" data-modal-open = "downloadModal">How To Use</a>
+			</div>
+ 		</div>
+</div>
+<div style = "padding:25px;padding-top:60px;" id = "welcome" data-section="true">
+	<div class="hero-unit">
+  <h2>Business Catalyst UI Style Guide</h2>
+  <p>This is a collection of elements, components, patterns and guidelines built for speeding up the development on the BC platform, mentaining consistency in terms of design and user experience</p>
+  <p>Most part of the elements rely of a customized <a href="#">Twitter Bootstrap</a> for styling. Most interaction is done using <a href="#">jQuery</a> plugins</p>
+  <p>
+  	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer placerat pellentesque dui id aliquam. Nullam egestas sodales nisl ac interdum. Vivamus erat nibh, ultricies posuere congue id, ultrices luctus enim. Quisque rhoncus lacinia massa, eu varius lacus rhoncus ut.
+  </p>
+  <p>
+    <a class="btn btn-primary btn-large" data-sectionswitch = "buttons">
+      Dive In
+    </a>
+  </p>
+</div>
+</div>
+<div style = "padding:5px;display:none" id = "buttons" data-section="true">
+	<h1 style="margin-top:50px;">UI Buttons</h1>
+	<div class = "well">
+
+		<table class = "table table-striped">
+			<thead>
+				<tr>
+					<th>Appearence</th>
+					<th>Mini</th>
+					<th>Normal</th>
+					<th>Large</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Normal</td>
+					<td><span id="gc_btn_1"><a class="btn btn-mini" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_1"/></td>
+					<td><span id="gc_btn_2"><a class="btn" href="#">Click Me</a></span>  <span class="getcode" data-getcode="gc_btn_2"/></td>
+					<td><span  id="gc_btn_3"><a class="btn btn-large" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_3"/></td>
+				</tr>
+				<tr>
+					<td>Primary</td>
+					<td><span id="gc_btn_4"><a class="btn btn-mini btn-primary" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_4"/></td>
+					<td><span id="gc_btn_5"><a class="btn btn-primary" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_5"/></td>
+					<td><span id="gc_btn_6"><a class="btn btn-large btn-primary" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_6"/></td>
+				</tr>
+				<tr>
+					<td>Danger</td>
+					<td><span id="gc_btn_7"><a class="btn btn-mini btn-danger" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_7"/></td>
+					<td><span id="gc_btn_8"><a class="btn btn-danger" href="#">Click Me</a> </span><span class="getcode" data-getcode="gc_btn_8"/></td>
+					<td><span id="gc_btn_9"><a class="btn btn-large btn-danger" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_9"/></td>
+				</tr>
+				<tr>
+					<td>Warning</td>
+					<td><span id="gc_btn_10"><a class="btn btn-mini btn-warning" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_10"/></td>
+					<td><span id="gc_btn_11"><a class="btn btn-warning" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_11"/></td>
+					<td><span id="gc_btn_12"><a class="btn btn-large btn-warning" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_12"/></td>
+				</tr>
+				<tr>
+					<td>Success</td>
+					<td><span id="gc_btn_13"><a class="btn btn-mini btn-success" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_13"/></td>
+					<td><span id="gc_btn_14"><a class="btn btn-success" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_14"/></td>
+					<td><span id="gc_btn_15"><a class="btn btn-large btn-success" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_15"/></td>
+				</tr>
+				<tr>
+					<td>Disabled</td>
+					<td><span id="gc_btn_16"><a class="btn btn-mini disabled" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_16"/></td>
+					<td><span id="gc_btn_17"><a class="btn disabled" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_17"/></td>
+					<td><span id="gc_btn_18"><a class="btn btn-warning disabled" href="#">Click Me</a></span> <span class="getcode" data-getcode="gc_btn_18"/></td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+	<div class = "well">
+		<h3>Grouped</h3>
+		<span id="gc_btn_group_1">
+			<div class="btn-group">
+				<a class="btn" href="#">Button 1</a>
+				<a class="btn" href="#">Button 2</a>
+				<a class="btn" href="#">Button 3</a>
+				<a class="btn" href="#">Button 4</a>
+			</div>
+		</span>
+		<span class="getcode" data-getcode="gc_btn_group_1"></span>
+		<h3>Large Grouped</h3>
+		<span id="gc_btn_group_2">
+			<div class="btn-group">
+				<a class="btn btn-large" href="#">Button 1</a>
+				<a class="btn btn-large" href="#">Button 2</a>
+				<a class="btn btn-large" href="#">Button 3</a>
+				<a class="btn btn-large" href="#">Button 4</a>
+			</div>
+		</span>
+		<span class="getcode" data-getcode="gc_btn_group_2"></span>
+	</div>
+	<div class = "well">	
+		<h3>Buttons with dropdown</h3>
+		<span id="gc_btn_group_3">
+			<div class="btn-group">
+				<a class="btn dropdown-toggle" data-toggle="dropdown">
+					Action
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				</ul>
+			</div>
+		</span>
+		<span class="getcode" data-getcode="gc_btn_group_3"></span>
+	</div>
+	
+
+	<div class = "well">
+
+		<h3>Button Toggles</h3>
+		Single toggle<br/>
+		
+		<span id="gc_btn_toggle_1"><button class="btn" data-toggle="button">Single Toggle</button></span> <span class="getcode" data-getcode="gc_btn_toggle_1"></span>
+		<br/>Checkbox Mode<br/>
+		<span id="gc_btn_toggle_2">
+			<div class="btn-group" data-toggle="buttons-checkbox">
+			  <button class="btn">Left</button>
+			  <button class="btn">Middle</button>
+			  <button class="btn">Right</button>
+			</div> 
+		</span><span class="getcode" data-getcode="gc_btn_toggle_2"></span>
+
+		<br/>Radio Mode<br/>
+		<span id="gc_btn_toggle_3">
+			<div class="btn-group" data-toggle="buttons-radio">
+			  <button class="btn">Left</button>
+			  <button class="btn">Middle</button>
+			  <button class="btn">Right</button>
+			</div>
+		</span> <span class="getcode" data-getcode="gc_btn_toggle_3"></span>
+
+	</div>
+</div>
+<div style = "padding:5px;display:none" id = "pods" data-section="true">
+	<h1 style = "margin-top:50px;">Pods, modals</h1>
+	<h3>Pods</h3>
+	<p>
+		Pods are basically non floating modals. The HTML markup is almost the same, the difference being that the pods have a "nonfloating" css class on the parent div.
+	</p>
+	<span id="gc_pods_1">
+		<div class="modal nonfloating">
+			<div class="modal-header">
+				<a href="#">Link</a><h1>Modal header</h1>
+			</div>
+			<div class="modal-body">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus velit a nibh eleifend dapibus. Integer libero massa, adipiscing at gravida vel, vehicula a urna. Donec id nisl eget massa ornare ultricies. Maecenas euismod tincidunt neque, in placerat quam placerat et. Morbi posuere sem vitae metus tincidunt porta. Vestibulum elit diam, malesuada in mattis in, consequat condimentum tortor. Suspendisse mauris leo, aliquet vel aliquam sed, eleifend cursus nulla. Nunc consectetur ipsum nec mi accumsan ac convallis sapien rutrum.</p>
+
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+				<a href="#" class="btn btn-primary">Save changes</a>
+			</div>
+		</div>
+	</span>
+	<span class="getcode" data-getcode="gc_pods_1"></span>
+
+	<h3>Modals</h3>
+	<span id="gc_modals1">
+	
+	<!--<modal to be open>-->
+	<div class="modal hide" id="myModal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h1>Modal header</h1>
+		</div>
+		<div class="modal-body">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus velit a nibh eleifend dapibus. Integer libero massa, adipiscing at gravida vel, vehicula a urna. Donec id nisl eget massa ornare ultricies. Maecenas euismod tincidunt neque, in placerat quam placerat et. Morbi posuere sem vitae metus tincidunt porta. Vestibulum elit diam, malesuada in mattis in, consequat condimentum tortor. Suspendisse mauris leo, aliquet vel aliquam sed, eleifend cursus nulla. Nunc consectetur ipsum nec mi accumsan ac convallis sapien rutrum.</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
+			<a href="#" class="btn btn-primary">Save changes</a>
+		</div>
+	</div>
+	<!--</modal to be open>-->
+
+	<!--<link that triggers the modal window>-->
+	<a href = "#" data-modal-open = "myModal">Click here to view this pod as a modal</a>
+	<!--</link that triggers the modal window>-->
+	</span>
+	<span class="getcode" data-getcode="gc_modals1"></span>
+</div>
+<div style = "padding:5px;display:none" id = "forms" data-section="true">
+	<h1 style = "margin-top:50px;">Form Elements</h1>
+	<div class = "well">
+		<h3>Basic form</h3>
+		<span id="gc_forms1">
+		<form>
+			<div class = "control-group">
+				<label for = "email">E-Mail (use type="email")</label>
+				<input type = "email" id = "email"/>
+			</div>
+			<div class = "control-group">
+				<label for = "pass1">Password</label>
+				<input type = "password" id = "pass1"/>
+			</div>
+			<div class = "control-group">
+				<label for = "pass2">Retype password</label>
+				<input type = "password" id = "pass2"/>
+			</div>
+			<div class = "control-group">
+				<label for = "select1">Choose category - Multiple selection (uses <a href="http://harvesthq.github.com/chosen/" target="blank">Chosen</a>)</label>
+					<select data-component = "dropdown" id = "select1" data-placeholder = "Click to select" multiple>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+
+					</select>
+			</div>
+
+			<div class = "control-group">
+				<label for = "select_quiet">What about a quiet selector?</label>
+					<select data-component = "dropdown" data-component-dropdown-search = "disabled" data-component-dropdown-mode = "quiet" id = "select_quiet" style="width:100px">
+						<option>Category 1</option>
+						<option>Supercalifragilisticexpialidocious</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+					</select>
+			</div>
+
+
+			<div class = "control-group">
+				<label for = "select2">Choose category -  Single Selection (uses <a href="http://harvesthq.github.com/chosen/" target="blank">Chosen</a>)</label>
+				
+					<select data-component = "dropdown" id="select2">
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<optgroup label = "Grouping">
+							<option value = 1>Group 1</option>
+							<option value = 2>Group 2</option>
+						</optgroup>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+					</select>
+
+
+			</div>
+			<div class = "control-group">
+				<label for = "news">
+					<input type = "checkbox" id = "news" name="checkbox"/> Subscribe to newsletter
+				</label>
+			</div>
+			<input type="submit" class="btn btn-primary" value="Submit"/>
+		</form>
+		</span> <span class="getcode" data-getcode="gc_forms1"></span>
+	</div>
+
+	<div class = "well">
+		<h3>Various Input sizes</h3>
+		<form>
+			<div class = "control-group">
+				<label for="inputmini">Mini</label>
+				<span id="gc_inputmini"><input id="inputmini" type = "text" class="input-mini"/> </span><span class="getcode" data-getcode="gc_inputmini"/>
+			</div>
+			<div class = "control-group">
+				<label for="inputsmall">Small</label>
+				<span id="gc_inputsmall"><input id="inputsmall" type = "text" class="input-small"/> </span><span class="getcode" data-getcode="gc_inputsmall"/>
+			</div>
+			<div class = "control-group">
+				<label for="inputmedium">Medium</label>
+				<span id="gc_inputmedium"><input id="inputmedium" type = "text" class="input-medium"/> </span><span class="getcode" data-getcode="gc_inputmedium"/>
+			</div>
+			<div class = "control-group">
+				<label for = "inputlarge">Large</label>
+				<span id="gc_inputlarge"><input id="inputlarge" type = "text" class="input-large"/> </span><span class="getcode" data-getcode="gc_inputlarge"/>
+			</div>
+			<div class = "control-group">
+				<label for="inputxlarge">XLarge</label>
+				<span id="gc_inputxlarge"><input id="inputxlarge" type = "text" class="input-xlarge"/> </span><span class="getcode" data-getcode="gc_inputxlarge"/>
+			</div>
+			<div class = "control-group">
+				<label for="inputxxlarge">XXLarge</label>
+				<span id="gc_inputxxlarge"><input id="inputxxlarge" type = "text" class="input-xxlarge"/> </span><span class="getcode" data-getcode="gc_inputxxlarge"/>
+			</div>
+			
+			<input type="submit" class="btn btn-primary" value="Submit"/>
+		</form>
+	</div>
+
+	<div class = "well">
+		<h3>Form field states</h3>
+		To add a form state, just add "error", "success" or "warning" classes to the .control-group containers
+		<span id="gc_formstates">
+		<form>
+			
+			<div class = "control-group error">
+				<label for = "email2">E-Mail</label>
+				<input type = "email" id = "email2"/>
+			</div>
+			
+			<div class = "control-group success">
+				<label for = "pass12">Password</label>
+				<input type = "password" id = "pass12"/>
+			</div>
+			<div class = "control-group warning">
+				<label for = "pass22">Retype password</label>
+				<input type = "password" id = "pass22"/>
+			</div>
+			<div class = "control-group">
+				<label for = "news2">
+					<input type = "checkbox" id = "news2" name="checkbox"/> Subscribe to newsletter
+				</label>
+			</div>
+
+			<input type="submit" class="btn btn-primary" value="Submit"/>
+		</form>
+		</span>
+		<span class="getcode" data-getcode="gc_formstates"/>
+	</div>
+
+	<div class = "well">
+		<h3 style="margin-bottom:20px;">Form with horizontal aligned labels</h3>
+		
+		<span id="gc_forms2">
+		<form class = "form-horizontal">
+			<div class = "control-group">
+				<label class="control-label" for = "email3">E-Mail</label>
+				<div class="controls">
+					<input type = "email" id = "email3"/>
+				</div>
+				<div class="controls">
+					<p class="help-block">PIN</p>
+					<input type = "number" id = "misc3" class="input-mini"/>
+				</div>
+				<div class="controls">
+					<p class="help-block">Range: <span id="rangevalue"/></p>
+					<input type="range" name="points" min="1" max="100" id="inputrange" step="1" />
+					<script>
+						$("#rangevalue").html($("#inputrange").val());
+						$("#inputrange").bind("change",function(){
+							$("#rangevalue").html($("#inputrange").val());
+						});
+					</script>
+				</div>
+			</div>
+			<div class = "control-group">
+				<label class="control-label" for = "pass13">Password</label>
+				<div class="controls"><input type = "password" id = "pass13"/></div>
+			</div>
+			<div class = "control-group">
+				<label class="control-label" for = "pass23">Retype password</label>
+				<div class="controls"><input type = "password" id = "pass23"/></div>
+			</div>
+			<div class = "control-group">
+				<label class="control-label" for = "news3">Subscribe to newsletter</label>
+				<div class="controls"><input type = "checkbox" id = "news3" name="checkbox"/></div>
+
+			</div>
+			<div class = "control-group">
+				<label class="control-label" for = "select2">Choose category - Multiple selection (uses <a href="http://harvesthq.github.com/chosen/" target="blank">Chosen</a>)</label>
+				<div class="controls">
+					<select data-component = "dropdown" id = "select3">
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+						<option>Category 4</option>
+						<option>Category 5</option>
+						<option>Category 1</option>
+						<option>Category 2</option>
+						<option>Category 3</option>
+					</select>
+				</div>
+			</div>
+			<div class = "control-group">
+				<div class="controls"><input type="submit" class="btn btn-primary" value="Submit"/></div>
+			</div>
+		</form>
+		</span>
+		<span class="getcode" data-getcode="gc_forms2"/>
+	</div>
+	
+</div>
+
+
+<div style = "padding:5px;display:none" id = "tables" data-section="true">
+	<h1>Tables</h1>
+
+		<h3>Basic Listing</h3>
+		Most of the time you will list items using a striped table:
+		<span id="gc_tables1">
+		<table class = "table table-striped">
+			<thead>
+				<tr>
+					<th>Column 1</th>
+					<th>Column 2</th>
+					<th>Column 3</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Value</td>
+					<td>Value</td>
+					<td>Value</td>
+				</tr>
+				<tr>
+					<td>Value</td>
+					<td>Value</td>
+					<td>Value</td>
+				</tr>
+				<tr>
+					<td>Value</td>
+					<td>Value</td>
+					<td>Value</td>
+				</tr>
+				<tr>
+					<td>Value</td>
+					<td>Value</td>
+					<td>Value</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>Footer value</td>
+					<td>Footer value</td>
+					<td>Footer value</td>
+				</tr>
+			</tfoot>
+		</table>
+		</span>
+		<span class="getcode" data-getcode="gc_tables1"/>
+
+
+
+</div>
+
+<div style = "display:none" id = "grid" data-section="true">
+	<h1 style = "margin-top:50px;">Using the grid system</h1>
+	12 columns fixed grid in a 940px container
+	<style>
+		
+		
+		.gridexample .row,.gridexample .row-fluid{
+			margin-top:10px;
+			margin-bottom:10px;
+		}
+		.gridexample .row div,.gridexample .row-fluid div{
+			background-color:#ececec;
+			text-align:center;
+		}
+	</style>
+	<div class = "gridexample">
+		<div class="row">
+			<div class="span3">3</div>
+			<div class="span3">3</div>
+			<div class="span3">3</div>
+			<div class="span3">3</div>
+
+		</div>
+		<div class="row">
+			<div class="span4">4</div>
+			<div class="span4">4</div>
+			<div class="span4">4</div>
+		</div>
+		<div class = "row">
+			<div class="span3">3</div>
+			<div class="span3">3</div>
+			<div class="span3">3</div>
+			<div class="span3">3</div>
+		</div>
+		<div class="row">
+			<div class="span6">4</div>
+			<div class="span6">4</div>
+
+		</div>
+	</div>
+
+
+	12 columns fluid grid in a container
+	
+	<div class="gridexample">
+		<div class="row-fluid">
+			
+			<div class="span3">3</div>
+			<div class="span3">3</div>
+			<div class="span3">3</div>
+			<div class="span3">3</div>
+			
+
+		</div>
+		<div class="row-fluid">
+			<div class="span4">4</div>
+			<div class="span4">4</div>
+			<div class="span4">4</div>
+		</div>
+
+		<div class="row-fluid">
+			
+			<div class="span3">3</div>
+			<div class="span3">3</div>
+			<div class="span3">3</div>
+			<div class="span3">3</div>
+			
+
+		</div>
+		<div class="row-fluid">
+			<div class="span6">4</div>
+			<div class="span6">4</div>
+
+		</div>
+	</div>
+
+	Examples:
+	<div><a href="#" data-modal-open = "gridexample1">A fluid grid in a modal pod</a></div>
+	<div class="modal hide" id="gridexample1" style="width:600px">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h1>Using the fluid grid in a fixed modal pod</h1>
+		</div>
+		<div class="modal-body">
+			<form>
+				<div>
+					<div class="row-fluid">
+						<div class="span6"><input type="text" class="input-xlarge"/></div>
+						<div class="span6"><input type="text" class="input-xlarge"/></div>
+					</div>
+					<div class="row-fluid">
+						<div class="span6"><input type="text" class="input-xlarge"/></div>
+					</div>
+					<div class="row-fluid">
+						<div class="span6"><input type="text" class="input-xlarge"/></div>
+					</div>
+					<div class="row-fluid">
+						<div class="span6"><input type="text" class="input-xlarge"/></div>
+					</div>
+					<div class="row-fluid">
+						<div class="span6"><input type="text" class="input-xlarge"/></div>
+						<div class="span2"><input type="checkbox"/> Red</div>
+						<div class="span2"><input type="checkbox"/> Blue</div>
+						<div class="span2"><input type="checkbox"/> Yellow</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
+		</div>
+	</div>
+</div>
+<div style = "display:none;padding:5px;" id = "tooltips" data-section="true">
+	<h1 style = "margin-top:50px;">Tooltips and pop-overs</h1>
+	<br/><br/>
+	<strong>Popovers</strong>
+
+	<table class="table table-striped" style="width:70%;margin-top:50px;">
+		<thead>
+			<tr>
+				<td>Placement</td>
+				<td>Trigger</td>
+				<td>See it in action</td>
+				<td>Get Markup</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Right</td>
+				<td>Click</td>
+				<td>
+					<span id="gc_popovers1">
+					<a href="#" data-component="popover" data-popover-content="Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia elec" data-popover-trigger="click" data-popover-placement="right">
+					Example
+					</a>
+					</span> 
+				</td>
+				<td>
+					<span class="getcode" data-getcode="gc_popovers1"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Top</td>
+				<td>Click</td>
+				<td>
+					<span id="gc_popovers2">
+					<a href="#" data-component="popover" title="popover title" data-popover-content="Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia elec" data-popover-trigger="click" data-popover-placement="top">
+						Example
+					</a>
+				</span>
+				</td>
+				<td>
+					<span class="getcode" data-getcode="gc_popovers2"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Right</td>
+				<td>Hover</td>
+				<td>
+					<span id="gc_popovers3">
+					<a href="#" data-component="popover" title="popover title" data-popover-content="Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia elec" data-popover-trigger="hover" data-popover-placement="right">
+						Example
+					</a>
+					</span> 
+				</td>
+				<td>
+					<span class="getcode" data-getcode="gc_popovers3"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Top</td>
+				<td>Hover</td>
+				<td>
+					<span id="gc_popovers4">
+					<a href="#" data-component="popover" title="popover title" data-popover-content="Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia elec" data-popover-trigger="hover" data-popover-placement="top">
+						Example
+					</a>
+					</span> 
+				</td>
+				<td>
+					<span class="getcode" data-getcode="gc_popovers4"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Right</td>
+				<td>Focus</td>
+				<td>
+					<span id="gc_popovers5">
+					<input type="text" data-component="popover" title="popover title" data-popover-content="Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia elec" data-popover-trigger="focus" data-popover-placement="right" placeholder="focus me"/>
+					</span> 
+						
+				</td>
+				<td>
+					<span class="getcode" data-getcode="gc_popovers5"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Top</td>
+				<td>Focus</td>
+				<td>
+					<span id="gc_popovers6">
+					<input type="text" data-component="popover" title="popover title" data-popover-content="Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia elec" data-popover-trigger="focus" data-popover-placement="top" placeholder="focus me"/>
+					</span> 
+						
+				</td>
+				<td>
+					<span class="getcode" data-getcode="gc_popovers6"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Top</td>
+				
+				<td>Manual</td>
+				<td>
+					<span id="gc_popovers7">
+					
+					<script>
+					function showPopover(elid){
+						$(".popover").hide();
+						$("#"+elid).popover("show");event.stopPropagation();
+
+					}
+					</script>
+					<a href="#" onClick='showPopover("manualTriggeredPopover");return false;'>click to trigger</a> 
+					<input type="text" id="manualTriggeredPopover" data-component="popover" title="popover title" data-popover-content="Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia elec" data-popover-trigger="manual" data-popover-placement="top" placeholder="trigger me from somewhere"/>
+				</span> 
+						
+				</td>
+				<td>
+					<span class="getcode" data-getcode="gc_popovers7"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Right</td>
+				<td>Manual</td>
+				<td>
+					<span id="gc_popovers8">
+					<script>
+					function showPopover(elid){
+						$(".popover").hide();
+						$("#"+elid).popover("show");event.stopPropagation();
+
+					}
+					</script>
+					<a href="#" onClick='showPopover("manualTriggeredPopover2");return false;'>click to trigger</a> 
+					<input type="text" id="manualTriggeredPopover2" data-component="popover" title="popover title" data-popover-content="Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia elec" data-popover-trigger="manual" data-popover-placement="right" placeholder="trigger me from somewhere"/>
+					</span>	
+				</td>
+				<td>
+					<span class="getcode" data-getcode="gc_popovers8"></span>
+				</td>
+			</tr>
+
+
+		</tbody>
+
+	</table>
+
+	<strong>Popover implementation: Hint component</strong>
+	<br/><br/>
+	This hint will show on focus:<br/>
+	<span class = "hint_container">
+		<input type="text" data-component="hint" data-component-hint-trigger = "focus"/>
+		<i class="icon icon-question-sign" data-component="popover" data-popover-content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor augue nec tortor molestie id mattis ante volutpat. Nulla eu posuere mauris. Donec facilisis volutpat eros non aliquam. Nullam ultricies, massa at elementum aliquam, arcu eros commodo est, " data-popover-trigger="manual" data-popover-placement="right"></i>
+	</span>
+	<br/><br/>
+	This hint will not show on focus, only when clicking the hint icon:<br/>
+	<span class = "hint_container">
+		<input type="text" data-component="hint"/>
+		<i class="icon icon-question-sign" data-component="popover" data-popover-content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor augue nec tortor molestie id mattis ante volutpat. Nulla eu posuere mauris. Donec facilisis volutpat eros non aliquam. Nullam ultricies, massa at elementum aliquam, arcu eros commodo est, " data-popover-trigger="manual" data-popover-placement="right"></i>
+	</span>
+	<br/><br/>
+	<!--
+	This hint will be initially visible:<br/>
+	<span class = "hint_container">
+		<input type="text" data-component="hint" data-component-hint-visible="true"/>
+		<i class="icon icon-question-sign" data-component="popover" data-popover-content = "content" data-popover-trigger="manual" data-popover-placement="right"></i>
+	</span>
+	-->
+</div>
+
+<div style = "display:none;padding:5px;" id = "accordion" data-section="true">
+	<h1 style = "margin-top:50px;">Accordion</h1>
+	We use bootstrap collapse component to display accordion styled containers.
+	<span id="gc_accordion">
+	<div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  Collapsible Group Item #1
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
+                <div class="accordion-inner">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                  Collapsible Group Item #2
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse" style="height: 0px; ">
+                <div class="accordion-inner">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                  Collapsible Group Item #3
+                </a>
+              </div>
+              <div id="collapseThree" class="accordion-body collapse" style="height: 0px; ">
+                <div class="accordion-inner">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+      </span>
+      <span class="getcode" data-getcode="gc_accordion"></span>
+      <br/><br/>
+          <strong>Sidebar component</strong> uses the same botstrap collapse plugin to display a sidebar. Basicaly, it transform neste unordered lists into properly formated accordion.
+          <br/>Needs a valid ID.
+          <br/> Use active to display the active section
+	<span id="gc_sidebar">
+    <ul data-component="sidebar" id="mySidebar">
+      	<li>
+      		<a href="#" class="active"><i class="icon-th-large"></i> Dashboard</a>
+      	</li>
+      	<li>
+      		<a href="#"><i class="icon-user"></i> CRM</a>
+      		<ul>
+      			<li><a href="#">Search</a></li>
+      			<li><a href="#">Customers</a></li>
+      			<li><a href="#">Orders</a></li>
+      		</ul>
+      	</li>
+      	<li>
+      		<a href="#"><i class="icon-shopping-cart"></i> E-Commerce</a>
+      		<ul>
+      			<li><a href="#">Products</a></li>
+      			<li><a href="#">Catalogs</a></li>
+      			<li><a href="#">Discount Codes</a></li>
+      		</ul>
+      	</li>
+      	<li>
+      		<a href="#"><i class="icon-cog"></i> Site Settings</a>
+      		<ul>
+      			<li><a href="#">Site Domain</a></li>
+      			<li><a href="#">E-Mail Accounts</a></li>
+      			<li><a href="#">Admin Users</a></li>
+      		</ul>
+      	</li>
+    </ul>
+  </span><br/>
+  <span class="getcode" data-getcode="gc_sidebar"></span>
+  
+<br/><br/>
+<strong>Standard Section Divider</strong> <span class="getcode" data-getcode="gc_divider1"></span> 
+<br/><br/>
+<span id="gc_divider1">
+<div href="#examplesection" class="divider">
+  	<span class="heading">I'm a standard divider</span>
+  </div>
+  <div>
+  	Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia electronică practic neschimbată. A fost popularizată în anii '60 odată cu ieşirea colilor Letraset care conţineau pasaje Lorem Ipsum, iar mai recent, prin programele de publicare pentru calculator, ca Aldus PageMaker care includeau versiuni de Lorem Ipsum.
+  </div>
+<br/><br/> 
+</span>
+
+<strong>Collapsible Section Divider</strong> <span class="getcode" data-getcode="gc_divider2"></span> 
+<br/><br/>
+<span id="gc_divider2">
+  <div data-toggle="collapse" data-component="collapsible_divider" href="#examplesection" class="divider">
+  	<span class="heading"><i class="icon-chevron-down"></i> I'm a collapsible divider</span>
+  </div>
+  <div id="examplesection" class="collapse">
+  	Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia electronică practic neschimbată. A fost popularizată în anii '60 odată cu ieşirea colilor Letraset care conţineau pasaje Lorem Ipsum, iar mai recent, prin programele de publicare pentru calculator, ca Aldus PageMaker care includeau versiuni de Lorem Ipsum.
+  </div>
+
+
+</span>
+<br/><br/>  
+<strong>Collapsible Section Divider with initial visibility</strong> <span class="getcode" data-getcode="gc_divider3"></span> 
+<br/><br/>
+<span id="gc_divider3">
+  <div data-toggle="collapse" data-component="collapsible_divider" href="#examplesection2" class="divider">
+  	<span class="heading"><i class="icon-chevron-up"></i> I'm a collapsible divider</span>
+  </div>
+  <div id="examplesection2" class="collapse in">
+  	Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă pentru literele respective. Nu doar că a supravieţuit timp de cinci secole, dar şi a facut saltul în tipografia electronică practic neschimbată. A fost popularizată în anii '60 odată cu ieşirea colilor Letraset care conţineau pasaje Lorem Ipsum, iar mai recent, prin programele de publicare pentru calculator, ca Aldus PageMaker care includeau versiuni de Lorem Ipsum.
+  </div>
+
+
+</span>
+<br/><br/>
+
+<br/><br/>
+</div>
+
+<div style = "display:none;padding:5px;" id = "filters" data-section="true">
+	<h1 style = "margin-top:50px;">Filters</h1>
+	The filter component takes a custom formated form and use it to broadcast a <strong>filterChange</strong> event, along with a filters object. Usually we use this pair to filter tabular data.
+	<br/>
+	Included bellow are two examples for using the filter component.
+	<br/><br/>
+	<strong>Simple filter enabled section divider</strong> <span class="getcode" data-getcode="gc_filters0"></span>
+<br/><br/>
+<span id="gc_filters0">
+<div class="divider" data-component="filters" id="myFilters0">
+  	<span class="heading">
+  		<a href="#" class="trigger">
+  			Filters <span class="caret"></span>
+  		</a>
+  		<div class="modal invisible filterpanel">
+			<div class="modal-body">
+		    	<form class="form-horizontal" action="#" method="post">
+				   	<div class="control-group">
+						<label class="control-label" for="keyword">Keyord filtering</label>
+							<div class="controls">
+								<span data-component-filter-label = "keyword">
+									<input data-component-filter-element type = "text" name = "keyword" id="keyword"/>
+								</span>
+							</div>
+				   </div>
+				</form>
+		   	</div>
+		   	<div class="modal-footer">
+			    <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+			    <a href="#" class="btn btn-danger" data-reset-filters = "true">Reset</a>
+			    <a href="#" class="btn btn-primary" data-apply-filters="true">Apply Filters</a>
+		   	</div>
+		</div>
+  	</span>
+</div>
+</span>
+
+How we bind the filters to this table: <span class="getcode" data-getcode="gc_sometable0"></span><br/><br/>
+	<span id="gc_sometable0">
+	<table class="table table-striped" id="someTable0">
+		<thead>
+			<tr>
+				<th>Column 1</th>
+				<th>Column 2</th>
+				<th>Column 3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Value</td>
+				<td>Value</td>
+				<td>Value</td>
+			</tr>
+			<tr>
+				<td>Value</td>
+				<td>Value</td>
+				<td>Value</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Footer value</td>
+				<td>Footer value</td>
+				<td>Footer value</td>
+			</tr>
+		</tfoot>
+	</table>
+	
+
+
+<script>
+		//this is an example of how to use table filtering
+		//the filters component broadcasts a 'filterChange' event together with an object containing the curent filters
+		// we use this event to perform the desired actions
+		$("#myFilters0").bind("filterChange",function(e,curent_filters){
+			//this doesn't actually filters the table, it's just a dummy animation
+			console.log(curent_filters);
+			$("#someTable0").hide();
+			$('<span id="updatingtable0">updating table...</span>').insertAfter($("#someTable0"));
+			setTimeout(function(){
+				$("#updatingtable0").remove();
+				$("#someTable0").show();
+			},1000);
+		});
+	</script>
+</span>
+<br/><br/>
+<strong>A more complex filter enabled section divider</strong> <span class="getcode" data-getcode="gc_filters2"></span>
+
+<br/><br/>
+<span id="gc_filters2">
+<div class="divider" data-component="filters" id="myFilters">
+  	<span class="heading">
+  		<a href="#" class="trigger">
+  			Filters <span class="caret"></span>
+  		</a>
+  		<div class="modal invisible filterpanel">
+			<div class="modal-body">
+		    	<form class="form-horizontal" action="#" method="post">
+	   				<div class="control-group">
+    					<label class="control-label" for="selectfilter">Choose category</label>
+    					<div class="controls">
+     						<span data-component-filter-label = "category">
+     							<select data-component-filter-element data-component="dropdown" id="selectfilter" multiple>
+							      <option>Category 1</option>
+							      <option>Category 2</option>
+							      <optgroup label="group 1">
+							      	<option>SubOption 1</option>
+							      	<option>SubOption 2</option>
+							      	<option>SubOption 3</option>
+							      </optgroup>
+							      <option>Category 3</option>
+							      <option>Category 4</option>
+							      <option>Category 5</option>
+							      <option>Category 1</option>
+							      <option>Category 2</option>
+							      <option>Category 3</option>
+							      <option>Category 1</option>
+							      <option>Category 2</option>
+							      <option>Category 3</option>
+							      <option>Category 4</option>
+							      <option>Category 5</option>
+							      <option>Category 1</option>
+							    </select>
+    						</span>
+    					</div>
+   					</div>
+   					<div class="control-group">
+    					<label class="control-label" for="news3">Size</label>
+    					<div class="controls">
+					    	<span data-component-filter-label = "Size">
+					    		M <input data-component-filter-element type="checkbox" name="size" value = "M"/>
+					    		L <input data-component-filter-element type="checkbox" name="size" value = "L"/>
+					    		XL <input data-component-filter-element type="checkbox" name="size" value = "XL"/>
+					    		XXL <input data-component-filter-element type="checkbox" name="size" value = "XXL"/>
+					    	</span>
+    					</div>
+   					</div>
+   					<div class="control-group">
+    					<label class="control-label" for="news3">Color</label>
+    						<div class="controls">
+						    	<span data-component-filter-label = "color">
+						    	Red <input data-component-filter-element type="radio" id="color1" name="color" value ="red"/>
+						    	Green <input data-component-filter-element type="radio" id="color2" name="color" value ="green"/>
+						    	Blue <input data-component-filter-element type="radio" id="color3" name="color" value ="blue"/>
+						    	</span>
+    						</div>
+   						</div>
+				   	<div class="control-group">
+						<label class="control-label" for="keyword">Keyord filtering</label>
+							<div class="controls">
+								<span data-component-filter-label = "keyword">
+									<input data-component-filter-element type = "text" name = "keyword" id="keyword"/>
+								</span>
+							</div>
+				   </div>
+				</form>
+		   	</div>
+		   	<div class="modal-footer">
+			    <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+			    <a href="#" class="btn btn-danger" data-reset-filters = "true">Reset</a>
+			    <a href="#" class="btn btn-primary" data-apply-filters="true">Apply Filters</a>
+		   	</div>
+		</div>
+  	</span>
+</div>
+</span>
+	How we bind the filters to this table: <span class="getcode" data-getcode="gc_sometable1"></span><br/><br/>
+	<span id="gc_sometable1">
+	<table class="table table-striped" id="someTable">
+		<thead>
+			<tr>
+				<th>Column 1</th>
+				<th>Column 2</th>
+				<th>Column 3</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Value</td>
+				<td>Value</td>
+				<td>Value</td>
+			</tr>
+			<tr>
+				<td>Value</td>
+				<td>Value</td>
+				<td>Value</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Footer value</td>
+				<td>Footer value</td>
+				<td>Footer value</td>
+			</tr>
+		</tfoot>
+	</table>
+	
+
+
+<script>
+		//this is an example of how to use table filtering
+		//the filters component broadcasts a 'filterChange' event together with an object containing the curent filters
+		// we use this event to perform the desired actions
+		$("#myFilters").bind("filterChange",function(e,curent_filters){
+			//this doesn't actually filters the table, it's just a dummy animation
+			console.log(curent_filters);
+			$("#someTable").hide();
+			$('<span id="updatingtable">updating table...</span>').insertAfter($("#someTable"));
+			setTimeout(function(){
+				$("#updatingtable").remove();
+				$("#someTable").show();
+			},1000);
+		});
+	</script>
+</span>
+</div>
+
+<div style = "display:none;padding:5px;" id = "tabs" data-section="true">
+	<h1 style = "margin-top:50px;">Tabs</h1>
+<br/><br/>
+<strong>Pod tabs</strong> <span class = "getcode" data-getcode = "gc_tabs1"></span>
+<br/>
+We use this type of tabs wherever there's a pod that needs this type of navigation. The tabs will be placed right bellow the pod header.  <!--<link that triggers the modal window>-->
+ <a href="#" data-modal-open="podtabsexample">see example of placement</a>
+ <!--</link that triggers the modal window>-->
+<br/><br/>
+	<span id="gc_tabs1">
+	<!--<navigation>-->
+	<ul class="nav nav-tabs">
+	  <li><a href="#home" data-toggle="tab">Home</a></li>
+	  <!--<active tab>-->
+	  <li class = "active"><a href="#profile" data-toggle="tab">Profile</a></li>
+	  <!--</active tab>-->
+	  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+	  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+	</ul>
+	<!--</navigation>-->
+	<!--<content containers>-->
+	<div class="tab-content">
+	  <!--<tab content>-->
+	  <div class="tab-pane" id="home">
+	  		<h3>Home Content</h3>
+	  		<p>
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  		</p>
+	  </div>
+	  <!--</tab content>-->
+	  <!--<tab content>-->
+	  	<!--<active container>-->
+	  <div class="tab-pane active" id="profile">
+	  	<h3>Profile</h3>
+	  		<p>
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  		</p>
+	  </div>
+	  <!--</active container>-->
+	  <!--</tab content>-->
+	  <!--<tab content>-->
+	  <div class="tab-pane" id="messages">
+	  		<h3>Messages Content</h3>
+	  		<p>
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  		</p>
+	  </div>
+	  <!--</tab content>-->
+	  <!--<tab content>-->
+	  <div class="tab-pane" id="settings">
+	  		<h3>Settings</h3>
+	  		<p>
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  		</p>
+	  </div>
+	  <!--</tab content>-->
+	</div>
+	<!--<content containers>-->
+	</span>
+	
+	<!--<modal to be open>-->
+ <div class="modal hide" id="podtabsexample">
+  <div class="modal-header">
+   <button type="button" class="close" data-dismiss="modal">&times;</button>
+   <h1>Modal header</h1>
+  </div>
+  <ul class="nav nav-tabs">
+	  <li><a href="#home2" data-toggle="tab">Home</a></li>
+	  <li class = "active"><a href="#profile2" data-toggle="tab">Profile</a></li>
+	  <li><a href="#messages2" data-toggle="tab">Messages</a></li>
+	  <li><a href="#settings2" data-toggle="tab">Settings</a></li>
+	</ul>
+	
+
+
+  <div class="modal-body" style="height:200px">
+  <div class="tab-content">
+	  <div class="tab-pane" id="home2">
+	  		<h3>Home Content</h3>
+	  		<p>
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  		</p>
+	  </div>
+	  <div class="tab-pane active" id="profile2">
+	  	<h3>Profile</h3>
+	  		<p>
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  		</p>
+	  </div>
+	  <div class="tab-pane" id="messages2">
+	  		<h3>Messages Content</h3>
+	  		<p>
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  		</p>
+	  </div>
+	  <div class="tab-pane" id="settings2">
+	  		<h3>Settings</h3>
+	  		<p>
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dui massa, sed placerat metus. Mauris non magna id eros feugiat
+	  		</p>
+	  </div>
+	</div>
+  </div>
+  <div class="modal-footer">
+   <a href="#" class="btn" data-dismiss="modal">Close</a>
+   <a href="#" class="btn btn-primary">Save changes</a>
+  </div>
+ </div>
+ <!--</modal to be open>-->
+
+
+
+
+</div>
+</body>
+</html>

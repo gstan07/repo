@@ -1,0 +1,36 @@
+// Give the tabs something to sit on
+.nav-tabs {
+  border-bottom: 1px solid #ccc;
+}
+.nav > li > a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color:@grayDark;
+  border:none;
+}
+.nav-tabs > li > a {
+
+  line-height: @baseLineHeight;
+  border: 1px solid transparent;
+  .border-radius(0);
+  color:@grayDark;
+  font-weight: @semiboldWeight;
+  border:none;
+  
+  &:hover {
+    border-color: @grayLighter @grayLighter #ddd;
+  }
+}
+.modal .nav-tabs > li:first-child > a{
+	padding-left:20px;
+}
+.nav-tabs > .active > a{
+	.blueGradient;
+	color:@white;
+	border:none;
+	text-shadow: 1px 1px #3a3a3a;
+	&:hover{
+		color:@white;
+		border:none;
+	}
+}
